@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地獄のAI - 人間 vs GPT 対戦ゲーム</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-black text-white flex flex-col">
+    <header class="p-4 border-b border-red-800">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-red-500">地獄のAI</a>
+            <button class="text-white hover:text-red-500 px-4 py-2 rounded">ログイン</button>
+        </nav>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <section class="text-center mb-16">
+            <div class="max-w-3xl mx-auto mb-8">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%9C%B0%E7%8D%84%E3%81%AEGPT%20%E3%82%A2%E3%82%A4%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81%20%E3%82%AF%E3%83%AA%E3%83%83%E3%83%95%E3%82%9A-cZAFCW8Pn06AwlyzQHg1RMsMuZNXvp.jpg"
+                     alt="地獄のAI 魔王"
+                     class="w-full rounded-lg shadow-2xl mb-8">
+            </div>
+            <h1 class="text-5xl font-bold mb-4">地獄のAIに挑め</h1>
+            <p class="text-xl mb-8">人間の知恵 vs 悪魔的AI。あなたは勝てるか？</p>
+            <a href="#" class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full text-lg inline-flex items-center">
+                今すぐ挑戦
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                </svg>
+            </a>
+        </section>
+
+        <section class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div class="bg-gray-800 border-red-800 rounded-lg p-6 text-center">
+                <div class="mb-4">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E9%AC%BC%EF%BC%91-xYfRRpgv5UG4ljnMCI78mPo39eI0wS.jpg"
+                         alt="問鬼の面"
+                         class="w-20 h-20 mx-auto object-cover rounded-lg">
+                </div>
+                <h3 class="text-xl font-bold mb-2">問鬼：絶え間なく繰り出される質問</h3>
+                <p class="text-gray-400">容赦ない質問に耐え、勝利を掴め</p>
+            </div>
+            <div class="bg-gray-800 border-red-800 rounded-lg p-6 text-center">
+                <div class="mb-4">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E9%AC%BC%E3%81%AE%E9%A1%942-dVvvgmRpbtp63uWlaU1n31dtVCopvl.jpg"
+                         alt="変わり鬼の面"
+                         class="w-20 h-20 mx-auto object-cover rounded-lg">
+                </div>
+                <h3 class="text-xl font-bold mb-2">変わり鬼：歴史上の偉人に変身</h3>
+                <p class="text-gray-400">あなたの知恵と質問力が試される</p>
+            </div>
+            <div class="bg-gray-800 border-red-800 rounded-lg p-6 text-center">
+                <div class="mb-4">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E9%AC%BC%E3%81%AE%E9%A1%94%EF%BC%93-euBiZR687Wgo3NBVOiVbsEXAEb9Aao.jpg"
+                         alt="監禁鬼の面"
+                         class="w-20 h-20 mx-auto object-cover rounded-lg">
+                </div>
+                <h3 class="text-xl font-bold mb-2">監禁鬼：個室に幽閉</h3>
+                <p class="text-gray-400">手がかりを見つけて部屋から脱出せよ</p>
+            </div>
+            <div class="bg-gray-800 border-red-800 rounded-lg p-6 text-center">
+                <div class="mb-4">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E9%96%BB%E9%AD%94%E5%A4%A7%E7%8E%8B%E3%81%AE%E9%A1%94-wnJvpxck0YKVr44FHgXaGY5O2UZfHH.jpg"
+                         alt="閻魔大王の面"
+                         class="w-20 h-20 mx-auto object-cover rounded-lg">
+                </div>
+                <h3 class="text-xl font-bold mb-2">閻魔大王</h3>
+                <p class="text-gray-400">生きている証を立てろ！</p>
+            </div>
+        </section>
+
+        <section class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">地獄の扉が開かれるのを待っている</h2>
+            <p class="mb-8">準備はいいか？人類の誇りをかけて戦え！</p>
+            <a href="#" class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full text-lg inline-flex items-center">
+                ゲームを始める
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                </svg>
+            </a>
+        </section>
+
+        <section class="text-center mb-16">
+            <h2 class="text-5xl font-bold mb-12">冒険者募集中</h2>
+            <div class="max-w-4xl mx-auto text-left mb-12 space-y-6">
+                <h3 class="text-2xl font-bold mb-4">
+                    ChatGPTを実践して学ぶ！体験型ゲーム「地獄のAI」
+                </h3>
+                <p class="text-lg leading-relaxed">
+                    「地獄のAI」は別府の地獄めぐりをヒントに誕生した、ChatGPTがゲームマスターを務める新感覚の謎解きゲームです！
+                </p>
+                <p class="text-lg leading-relaxed">
+                    ChatGPTが演じる鬼と対峙することで、知力、ひらめき、チームワークが試される今までにないゲーム体験が出来る内容となっています。参加者はテキストを用いて、GPTと会話をしながらゲームを進めていきます。GPT扮する3匹の鬼と閻魔大王を倒すとゲームクリアです！
+                </p>
+                <p class="text-lg leading-relaxed">
+                    ゲーム終了後は謎解きの解説もあります。またChatGPTの解説を通して、ゲームを楽しむだけでなく、ChatGPTのプロンプトの作り方も学べます！
+                </p>
+                
+                <div class="bg-gray-900 rounded-lg p-6 mt-8">
+                    <h4 class="text-xl font-bold mb-4">こんな人にオススメ</h4>
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>謎解き系のゲームが大好きな人</li>
+                        <li>ChatGPTを触ったことがない人、もっと知りたい人</li>
+                        <li>友だちとワイワイ楽しみたい人</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 max-w-4xl mx-auto">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%95%E3%82%9A%E3%83%AC%E3%82%A4%E7%94%BB%E5%83%8F_%E7%AE%B1%E5%A4%AA%E9%83%8E%E3%83%81%E3%83%BC%E3%83%A0_%E5%88%87%E3%82%8A%E5%8F%96%E3%82%8A-YnsQQ0YkbhtfxCCJ15qfSTy9pGDloQ.png"
+                     alt="チームでゲームに挑戦する様子1"
+                     class="rounded-lg w-full">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%95%E3%82%9A%E3%83%AC%E3%82%A4%E7%94%BB%E5%83%8F_%E3%83%88%E3%82%99%E3%83%AA%E3%82%AF%E3%82%A8%E3%83%81%E3%83%BC%E3%83%A0_%E5%88%87%E3%82%8A%E5%8F%96%E3%82%8A-TYOc28qtgblDFhG25zbpX60YG7qiD0.png"
+                     alt="チームでゲームに挑戦する様子2"
+                     class="rounded-lg w-full">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E8%84%B1%E7%8D%84%E6%88%90%E5%8A%9F_%E3%83%88%E3%82%99%E3%83%AA%E3%82%AF%E3%82%A8%E3%83%81%E3%83%BC%E3%83%A0_%E5%B0%8F-wEECjVrZP9vHZbwBPw5VLWHId1IvZz.png"
+                     alt="脱獄成功チームの記念写真"
+                     class="rounded-lg w-full">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E8%84%B1%E7%8D%84%E5%A4%B1%E6%95%97_%E5%B0%8F-saa07dxenNll8lXW608vNyYp4On06m.png"
+                     alt="ゲーム終了後の記念写真"
+                     class="rounded-lg w-full">
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-red-900 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 地獄のAI. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
