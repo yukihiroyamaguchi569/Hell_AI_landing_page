@@ -1,2 +1,5 @@
+url: "https://jigoku-ai.conect.llc"
+baseurl: ""
+
 plugins:
   - jekyll-sitemap
